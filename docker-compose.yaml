@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  focal:
+    image: ubuntu
+    build:
+      context: ./ubuntu/focal
+    container_name: focal
+    restart: always
+    volumes:
+      - type: volume
+        source: ./insumos
+        target: /app
